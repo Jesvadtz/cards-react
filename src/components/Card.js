@@ -1,27 +1,24 @@
 import React from "react";
 import "./Card.css";
-import CustomCategories from "./Categories";
 
-function Title(props) {
-  return <h4>{props.children}</h4>;
-}
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import Tshirt from "./tshirt-kids.jpg";
 
-function Price(props) {
-  return <h6>{props.children}</h6>;
-}
-function CardImage(props) {
-  return <img src={props.src} className="card-tshirt" />;
-}
-
-function Card(props) {
+function CustomCard() {
   return (
-    <article className="card">
-      <CardImage src={props.src} />
-      <Title>{props.title}</Title>
-      <Price>{props.price}</Price>
-      <CustomCategories>{props.category}</CustomCategories>
-    </article>
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={Tshirt} />
+      <Card.Body>
+        <Card.Title>T-shirt Kids</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="info">Go somewhere</Button>
+      </Card.Body>
+    </Card>
   );
 }
 
-export default Card;
+export default CustomCard;
