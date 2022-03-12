@@ -1,13 +1,11 @@
 import "./App.scss";
-// import CustomCard from "./components/Card";
-import CustomForm from "./components/Form/Form";
+import CustomCard from "./components/Card";
 
 function App() {
   return (
     <div className="App">
       <main className="App-header">
-        {/* <CustomCard /> */}
-        <CustomForm />
+        <CustomCard />
       </main>
     </div>
   );

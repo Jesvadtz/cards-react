@@ -3,9 +3,17 @@ import "./Card.css";
 
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Badge from "react-bootstrap/Badge";
 import Tshirt from "./tshirt-kids.jpg";
 
 function CustomCard() {
+  // Hooks
+  const [count, setCount] = React.useState(0);
+
+  function addCart() {
+    setCount(count + 1);
+  }
+
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={Tshirt} />
@@ -15,7 +23,14 @@ function CustomCard() {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="info">Go somewhere</Button>
+        <div className="cart">
+          <Button variant="info" onClick={addCart}>
+            Add Cart
+          </Button>
+          <Badge pill bg="danger" className="cart-count">
+            Cart : {count}
+          </Badge>
+        </div>
       </Card.Body>
     </Card>
   );
