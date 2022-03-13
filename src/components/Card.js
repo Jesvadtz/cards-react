@@ -3,17 +3,12 @@ import "./Card.css";
 
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Badge from "react-bootstrap/Badge";
 import Tshirt from "./tshirt-kids.jpg";
 
-function CustomCard() {
-  // Hooks
-  const [count, setCount] = React.useState(0);
-
+function CustomCard({ count, setCount }) {
   function addCart() {
     setCount(count + 1);
   }
-
   return (
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={Tshirt} />
@@ -24,12 +19,7 @@ function CustomCard() {
           bulk of the card's content.
         </Card.Text>
         <div className="cart">
-          <Button variant="info" onClick={addCart}>
-            Add Cart
-          </Button>
-          <Badge pill bg="danger" className="cart-count">
-            Cart : {count}
-          </Badge>
+          <Button onClick={addCart}>Add Cart</Button>
         </div>
       </Card.Body>
     </Card>
