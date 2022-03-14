@@ -1,5 +1,5 @@
 import React from "react";
-import cartIcon from "../assets/cart.png";
+import cartIcon from "../../assets/cart.png";
 import Badge from "react-bootstrap/Badge";
 
 function Header({ count }) {

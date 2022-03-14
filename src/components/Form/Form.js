@@ -3,18 +3,24 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 function CustomForm() {
+  const [form, setForm] = React.useState({
+    email: "",
+    password: "",
+  });
+
   function recordInfo(event) {
-    const [Form, setForm] = React.useState({
-      email: "",
-      password: "",
+    setForm({
+      ...form,
+      [event.target.name]: event.target.value,
     });
   }
   function saveInfo(event) {
-    event.preventDefault;
-    alert(JSON.stringify(Form));
+    event.preventDefault();
+    console.log(event);
+    alert(JSON.stringify(form));
   }
   return (
-    <Form onSubmit={() => saveInfo()}>
+    <Form onSubmit={(event) => saveInfo(event)}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control
@@ -23,9 +29,6 @@ function CustomForm() {
           onChange={(event) => recordInfo(event)}
           name="email"
         />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">

@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.scss";
-import CustomCard from "./components/Card";
-import Header from "./components/Header";
+import CustomCard from "./components/Card/Card";
+import Header from "./components/Header/Header";
+import CustomForm from "./components/Form/Form";
 
 function App() {
   //Hooks
@@ -12,6 +13,7 @@ function App() {
       <Header count={count} />
       <main className="App-header">
         <CustomCard count={count} setCount={setCount} />
+        <CustomForm />
       </main>
     </div>
   );

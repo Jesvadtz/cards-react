@@ -3,7 +3,7 @@ import "./Card.css";
 
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Tshirt from "./tshirt-kids.jpg";
+import Tshirt from "../../assets/tshirt-kids.jpg";
 
 function CustomCard({ count, setCount }) {
   function addCart() {
