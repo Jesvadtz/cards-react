@@ -1,0 +1,15 @@
+.sectionCards {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.products-cards {
+  display: flex;
+  gap: 1rem;
+}
+.button-cards {
+  display: flex;
+  justify-content: flex-end;
+}

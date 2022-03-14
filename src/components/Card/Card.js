@@ -1,29 +1,33 @@
 import React from "react";
 import "./Card.css";
+import Categories from "../Categories/Categories";
 
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Tshirt from "../../assets/tshirt-kids.jpg";
+function Title(props) {
+  return <h4>{props.children}</h4>;
+}
 
-function CustomCard({ count, setCount }) {
-  function addCart() {
-    setCount(count + 1);
-  }
+function Price(props) {
+  return <h6>{props.children}</h6>;
+}
+function CardImage(props) {
+  return <img src={props.src} className="card-tshirt" />;
+}
+
+function Card(props) {
   return (
-    <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={Tshirt} />
-      <Card.Body>
-        <Card.Title>T-shirt Kids</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <div className="cart">
-          <Button onClick={addCart}>Add Cart</Button>
-        </div>
-      </Card.Body>
-    </Card>
+    <article className="card">
+      <div>
+        <CardImage src={props.src} />
+      </div>
+      <div className="card-data">
+        <Title>{props.title}</Title>
+        <Price>{props.price}</Price>
+      </div>
+      <div className="categories">
+        <Categories>{props.category}</Categories>
+      </div>
+    </article>
   );
 }
 
-export default CustomCard;
+export default Card;

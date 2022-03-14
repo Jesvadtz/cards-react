@@ -1,31 +1,28 @@
 .card {
-  width: 300px;
+  width: 280px;
   height: auto;
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 0.5rem;
   background-color: white;
   color: #282c34;
   border-radius: 0.5rem;
 }
-h4,
-h6 {
+.card-data {
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  padding: 0.5rem;
+  padding-left: 0.5rem;
 }
-
 .card-tshirt {
   height: 150px;
   width: 100%;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.2rem 0.2rem 0 0;
 }
-.cart {
+.categories {
   display: flex;
-  justify-content: space-between;
-}
-.cart-count {
-  font-size: 0.8rem !important;
-  display: flex !important;
-  align-items: center !important;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
 }

@@ -1,0 +1,20 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #3b4559;
+  color: white;
+}
+.pages {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.pages img {
+  width: 32px;
+  border-radius: 50%;
+}
