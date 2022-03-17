@@ -4,11 +4,17 @@
   text-align: left;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   justify-content: space-between;
   gap: 0.5rem;
   background-color: white;
   color: #282c34;
   border-radius: 0.5rem;
+}
+.container-image {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
 .card-data {
   display: flex;
@@ -16,10 +22,19 @@
   margin: 0;
   padding-left: 0.5rem;
 }
-.card-tshirt {
+.card-image {
   height: 150px;
-  width: 100%;
+  width: 150px;
   border-radius: 0.2rem 0.2rem 0 0;
+  display: flex;
+  justify-content: center;
+}
+.card-data p {
+  font-size: 0.6rem;
+}
+.card-data h4 {
+  font-size: 1rem;
+  font-weight: bold;
 }
 .categories {
   display: flex;

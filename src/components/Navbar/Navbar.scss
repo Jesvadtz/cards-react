@@ -1,20 +1,10 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 2rem;
-  background-color: #3b4559;
-  color: white;
-}
-.pages {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-.pages img {
-  width: 32px;
+.navbar-user-image {
   border-radius: 50%;
+  height: 2rem;
+}
+.navbar-pages-brand {
+  flex-grow: 2;
+}
+.navbar-pages-names {
+  flex-grow: 0;
 }

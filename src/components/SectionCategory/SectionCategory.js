@@ -2,15 +2,15 @@ import React from "react";
 import "./SectionCategory.scss";
 import Categories from "../Categories/Categories";
 
-function SectionCategory() {
+function SectionCategory(props) {
+  const { categories } = props;
   return (
     <section className="sectionCategory">
       <h5>Categories</h5>
       <div className="all-categories">
-        <Categories children="Men's clothing" />
-        <Categories children="Jewelery" />
-        <Categories children="Electronics" />
-        <Categories children="Women's clothing" />
+        {categories.map((category) => {
+          return <Categories children={category} key={category} />;
+        })}
       </div>
     </section>
   );

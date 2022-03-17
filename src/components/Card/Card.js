@@ -5,23 +5,26 @@ import Categories from "../Categories/Categories";
 function Title(props) {
   return <h4>{props.children}</h4>;
 }
-
+function Description(props) {
+  return <p>{props.children}</p>;
+}
 function Price(props) {
   return <h6>{props.children}</h6>;
 }
 function CardImage(props) {
-  return <img src={props.src} className="card-tshirt" />;
+  return <img src={props.src} className="card-image" />;
 }
 
 function Card(props) {
   return (
     <article className="card">
-      <div>
-        <CardImage src={props.src} />
+      <div className="container-image">
+        <CardImage src={props.image} />
       </div>
       <div className="card-data">
         <Title>{props.title}</Title>
-        <Price>{props.price}</Price>
+        <Description>{props.description}</Description>
+        <Price>${props.price}</Price>
       </div>
       <div className="categories">
         <Categories>{props.category}</Categories>

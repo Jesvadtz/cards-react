@@ -1,10 +1,11 @@
 import React from "react";
 
+function Name(props) {
+  return <h6>Hi, {props.children}</h6>;
+}
+
 function Greet() {
   const name = "Andrea";
-  function Name(props) {
-    return <h6>Hi, {props.children}</h6>;
-  }
   return (
     <div>
       <Name>{name}</Name>
