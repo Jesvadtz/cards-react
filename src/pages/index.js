@@ -6,15 +6,15 @@ import SectionCategory from "../components/SectionCategory/SectionCategory";
 import NavbarCustom from "../components/Navbar/Navbar";
 
 function Home() {
-  const [products, SetProducts] = React.useState([]);
-  const [categories, SetCategories] = React.useState([]);
+  const [products, setProducts] = React.useState([]);
+  const [categories, setCategories] = React.useState([]);
 
   React.useEffect(() => {
     async function getProducts() {
       const response = await fetch("https://fakestoreapi.com/products").then(
         (response) => response.json()
       );
-      SetProducts(response);
+      setProducts(response);
     }
 
     getProducts();
@@ -25,8 +25,7 @@ function Home() {
       const respCategories = await fetch(
         "https://fakestoreapi.com/products/categories"
       ).then((respCategories) => respCategories.json());
-      console.log(respCategories);
-      SetCategories(respCategories);
+      setCategories(respCategories);
     }
 
     getCategories();

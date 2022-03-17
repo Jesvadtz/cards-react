@@ -1,8 +1,6 @@
 import React from "react";
 import "./SectionCards.scss";
 import Card from "../Card/Card";
-// import Button from "../Button/Button";
-// import products from "../../data/products.json";
 
 function SectionCards(props) {
   const { products } = props;
@@ -24,9 +22,6 @@ function SectionCards(props) {
           );
         })}
       </div>
-      {/* <div className="button-cards">
-        <Button>Ver todos los productos</Button>
-      </div> */}
     </section>
   );
 }
