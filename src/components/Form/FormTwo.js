@@ -21,13 +21,7 @@ function FormCustom() {
     event.preventDefault();
     const res = await fetch("https://fakestoreapi.com/products", {
       method: "POST",
-      body: JSON.stringify({
-        title: "",
-        price: "",
-        description: "",
-        image: "",
-        category: "",
-      }),
+      body: JSON.stringify(newProduct),
     }).then((res) => res.json());
     setNewProduct(res);
     // console.log(newProduct);
