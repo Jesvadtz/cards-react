@@ -16,7 +16,6 @@ function CustomForm() {
   }
   function saveInfo(event) {
     event.preventDefault();
-    console.log(event);
     alert(JSON.stringify(form));
   }
   return (
